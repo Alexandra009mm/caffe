@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Coffee </title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!--header-->
+    <header>
+        <h2>☕ Love Coffee</h2>
+
+        <nav class="nav_header active" id="menu">
+            <ul>
+                <li class="list_nav"><a href="#inicio">Inicio</a></li>
+                <li class="list_nav"><a href="#beneficios">Beneficios</a></li>
+                <li class="list_nav"><a href="#menu-cafe">Menú</a></li>
+                <li class="list_nav"><a href="#precios">Precios</a></li>
+                <li class="list_nav"><a href="#reserva">Reserva</a></li>
+                <li class="list_nav"><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <button id="boton_show" type="button" onclick="show_menu()">≡</button>
+    </header>
+
+
+    <main>
+
+        <!-- hero -->
+        <div class="container_hero" id="inicio">
+            <ul>
+                <li><img src="img/hero1.jpg" alt="Taza de café artesanal"></li>
+                <li><img src="img/hero2.jpg" alt="Barista sirviendo café"></li>
+                <li><img src="img/hero3.jpg" alt="Café con arte en espuma"></li>
+                <li><img src="img/hero4.jpg" alt="Café de origen colombiano"></li>
+            </ul>
+            <article class="obsolute_hero">
+                <h1>Love Coffee</h1>
+                <p>Cada sorbo, una historia</p>
+                <a class="boton" href="#menu-cafe">Ver nuestro menú</a>
+            </article>
+        </div>
+
+
+        <!-- Video-->
+        <video src="img/7171091-uhd_3840_2160_25fps.mp4" loop autoplay muted></video>
+
+
+        <!--  — cards -->
+        <article id="beneficios">
+            <h2>¿Por qué elegirnos?</h2>
+            <div class="cards">
+
+                <section class="card">
+                    <img class="card__image" src="img/hero1.jpg" alt="Café de origen">
+                    <div class="card__body">
+                        <h3 class="card__title">Café de origen</h3>
+                        <p class="card__text">Trabajamos directamente con caficultores colombianos para traerte el mejor grano, cosechado en las montañas.</p>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <img class="card__image" src="img/hero2.jpg" alt="Baristas expertos">
+                    <div class="card__body">
+                        <h3 class="card__title">Baristas expertos</h3>
+                        <p class="card__text">Nuestro equipo está certificado en técnicas de extracción, latte art y catación profesional.</p>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <img class="card__image" src="img/hero3.jpg" alt="Ambiente acogedor">
+                    <div class="card__body">
+                        <h3 class="card__title">Ambiente acogedor</h3>
+                        <p class="card__text">Un espacio diseñado para que trabajes, te reúnas o simplemente descanses con una buena taza en mano.</p>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <img class="card__image" src="img/hero4.jpg" alt="Tostión artesanal">
+                    <div class="card__body">
+                        <h3 class="card__title">Tostión artesanal</h3>
+                        <p class="card__text">Tostamos el grano en pequeños lotes para garantizar frescura y un perfil de sabor único.</p>
+                    </div>
+                </section>
+
+            </div>
+        </article>
+
+
+        <!-- Menu — cards -->
+        <article id="menu-cafe">
+            <h2>Nuestro menú</h2>
+            <div class="cards">
+
+                <section class="card">
+                    <img class="card__image" src="img/hero1.jpg" alt="Espresso">
+                    <div class="card__body">
+                        <h3 class="card__title">Espresso</h3>
+                        <p class="card__text">Concentrado puro, intenso y con crema perfecta. La base de todo gran café.</p>
+                        <div class="card__footer">
+                            <span> 30 ml</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <img class="card__image" src="img/hero2.jpg" alt="Cappuccino">
+                    <div class="card__body">
+                        <h3 class="card__title">Cappuccino</h3>
+                        <p class="card__text">Espresso con leche vaporizada y una generosa capa de espuma sedosa. Clásico italiano.</p>
+                        <div class="card__footer">
+                            <span> 180 ml</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <img class="card__image" src="img/hero3.jpg" alt="Latte Art">
+                    <div class="card__body">
+                        <h3 class="card__title">Latte Art</h3>
+                        <p class="card__text">Espresso suave con abundante leche texturizada y un diseño en espuma hecho a mano.</p>
+                        <div class="card__footer">
+                            <span> 240 ml</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <img class="card__image" src="img/hero4.jpg" alt="Cold Brew">
+                    <div class="card__body">
+                        <h3 class="card__title">Cold Brew</h3>
+                        <p class="card__text">Café extraído en frío durante 18 horas. Suave, dulce y perfecto para el calor.</p>
+                        <div class="card__footer">
+                            <span> 350 ml</span>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </article>
+
+
+        <!-- tabla comparativa-->
+        <article id="precios">
+            <h2>Precios y planes</h2>
+
+            <div class="tabla_wrapper">
+                <table class="tabla_precios">
+                    <thead>
+                        <tr>
+                            <th>Plan</th>
+                            <th>¿Qué incluye?</th>
+                            <th>Días</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Plan"><strong>Básico</strong></td>
+                            <td data-label="¿Qué incluye?">1 café del día + pastelería de la casa</td>
+                            <td data-label="Días">Lun - Vie</td>
+                            <td data-label="Precio">$8.000 COP</td>
+                            <td><button class="card__button">Elegir</button></td>
+                        </tr>
+                        <tr class="tabla_destacada">
+                            <td data-label="Plan"><strong> Dúo</strong></td>
+                            <td data-label="¿Qué incluye?">2 bebidas + 2 snacks a elección</td>
+                            <td data-label="Días">Todos los días</td>
+                            <td data-label="Precio">$22.000 COP</td>
+                            <td><button class="card__button">Elegir</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Plan"><strong>Mensual</strong></td>
+                            <td data-label="¿Qué incluye?">30 cafés del mes, sin restricciones</td>
+                            <td data-label="Días">Todos los días</td>
+                            <td data-label="Precio">$180.000 COP</td>
+                            <td><button class="card__button">Elegir</button></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Plan"><strong>Empresa</strong></td>
+                            <td data-label="¿Qué incluye?">Cafés ilimitados + domicilio a oficina</td>
+                            <td data-label="Días">Lun  - Sáb</td>
+                            <td data-label="Precio">A convenir</td>
+                            <td><button class="card__button">Contactar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+
+        <!-- RESERVA — formulario -->
+        <article id="reserva">
+            <h2>Reserva tu mesa</h2>
+
+            <div class="form_wrapper">
+                <form class="form_reserva">
+
+                    <div class="form_grupo">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre"
+                               placeholder="Ej: María García" required>
+                    </div>
+
+                    <div class="form_grupo">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="Ej: maria@correo.com" required>
+                    </div>
+
+                    <div class="form_grupo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono"
+                               placeholder="Ej: 300 123 4567">
+                    </div>
+
+                    <div class="form_grupo">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+
+                    <div class="form_grupo">
+                        <label for="hora">Hora</label>
+                        <select id="hora" name="hora">
+                            <option value="">-- Selecciona --</option>
+                            <option>7:00 am</option>
+                            <option>8:00 am</option>
+                            <option>9:00 am</option>
+                            <option>10:00 am</option>
+                            <option>11:00 am</option>
+                            <option>12:00 pm</option>
+                            <option>2:00 pm</option>
+                            <option>4:00 pm</option>
+                            <option>6:00 pm</option>
+                        </select>
+                    </div>
+
+                    <div class="form_grupo">
+                        <label for="personas">Número de personas</label>
+                        <input type="number" id="personas" name="personas"
+                               min="1" max="12" placeholder="Ej: 2">
+                    </div>
+
+                    <div class="form_grupo form_grupo--ancho">
+                        <label for="mensaje">Mensaje adicional</label>
+                        <textarea id="mensaje" name="mensaje" rows="4"
+                                  placeholder="¿Alguna petición especial? Cumpleaños, alergias, etc."></textarea>
+                    </div>
+
+                    <div class="form_grupo form_grupo--ancho">
+                        <button type="submit" class="form_boton">Reservar</button>
+                    </div>
+
+                </form>
+            </div>
+        </article>
+
+
+        <!-- formulario-->
+        <article id="form_pequeño">
+            <h2>Únete al club del café</h2>
+            <p class="section_texto">Recibe promociones exclusivas, recetas y novedades cada semana.</p>
+
+            <form class="form_form_pequeño">
+                <input type="email" placeholder="tu@correo.com" required>
+                <button type="submit" class="card__button">Suscribirme</button>
+            </form>
+        </article>
+
+
+        <!-- contacto — cards-->
+        <article id="contacto">
+            <h2>Encuéntranos</h2>
+            <div class="cards">
+
+                <section class="card">
+                    <div class="card__body">
+                        <h3 class="card__title">📍 Dirección</h3>
+                        <p class="card__text">Calle 72 # 10 - 34, Bogotá, Colombia.<br>A dos cuadras del Parque de la 72.</p>
+                        <div class="card__footer">
+                            <span>Lun - Dom</span>
+                            <button class="card__button">Ver mapa</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <div class="card__body">
+                        <h3 class="card__title">🕗 Horarios</h3>
+                        <p class="card__text">
+                            Lunes a Viernes: 6:30 am - 8:00 pm<br>
+                            Sábados: 7:00 am - 9:00 pm<br>
+                            Domingos: 8:00 am - 6:00 pm
+                        </p>
+                        <div class="card__footer">
+                            <span>Abierto hoy</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <div class="card__body">
+                        <h3 class="card__title">📱 Redes sociales</h3>
+                        <p class="card__text">Síguenos y entérate de nuestras promociones, eventos de cata y novedades del mes.</p>
+                        <div class="card__footer">
+                            <span>@lovecoffee.co</span>
+                            <button class="card__button">Seguir</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <div class="card__body">
+                        <h3 class="card__title">✉️ Escríbenos</h3>
+                        <p class="card__text">¿Tienes dudas, sugerencias o quieres un pedido especial? Estamos para ayudarte.</p>
+                        <div class="card__footer">
+                            <span>hola@lovecoffee.co</span>
+                            <button class="card__button">Escribir</button>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </article>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer id="site-footer">
+        <p>&copy; <span id="year"></span> Love Coffee. Todos los derechos reservados.</p>
+
+        <nav aria-label="Navegación del footer">
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">WhatsApp</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
