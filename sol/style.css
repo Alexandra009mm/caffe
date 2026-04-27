@@ -1,0 +1,481 @@
+/* ============================================
+   FLOWSTATE — Estilos principales
+   Tema: app de productividad, oscuro y moderno
+   ============================================ */
+
+/* ---- Variables globales (colores, tipografía, etc.) ---- */
+:root {
+    --color-fondo:     #0d0f14;       /* fondo principal oscuro */
+    --color-superficie:#13161e;       /* fondo de tarjetas */
+    --color-borde:     #1e2230;       /* bordes sutiles */
+    --color-acento:    #7c6dfa;       /* violeta eléctrico — color principal de la marca */
+    --color-acento2:   #fa6d8f;       /* rosa — acento secundario */
+    --color-texto:     #e8eaf0;       /* texto principal */
+    --color-texto-dim: #7a7f96;       /* texto secundario / subtítulos */
+    --fuente-titulo:   'Syne', sans-serif;
+    --fuente-cuerpo:   'Outfit', sans-serif;
+    --radio:           16px;          /* border-radius estándar */
+    --sombra:          0 8px 32px rgba(0,0,0,0.35);
+    --transicion:      0.3s ease;
+}
+
+/* ---- Reset básico ---- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* desplazamiento suave al hacer clic en enlaces internos */
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-cuerpo);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ============================================
+   HEADER — Barra de navegación fija
+   ============================================ */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;                          /* siempre encima de todo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 68px;
+    background: rgba(13, 15, 20, 0.85);     /* fondo semi-transparente */
+    backdrop-filter: blur(12px);            /* efecto de vidrio esmerilado */
+    border-bottom: 1px solid var(--color-borde);
+}
+
+/* Logo: ícono + nombre de la app */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.4rem;
+    color: var(--color-acento);
+    letter-spacing: -0.5px;
+}
+
+/* Links de navegación */
+.nav-header {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-header a {
+    color: var(--color-texto-dim);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color var(--transicion);
+}
+
+.nav-header a:hover {
+    color: var(--color-texto);
+}
+
+/* Botón especial "Empezar gratis" en el nav */
+.nav-header .nav-cta {
+    background: var(--color-acento);
+    color: #fff !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: opacity var(--transicion), transform var(--transicion);
+}
+
+.nav-header .nav-cta:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+/* Botón hamburguesa — oculto en pantallas grandes */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-texto);
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* ============================================
+   HERO — Sección principal con carrusel
+   ============================================ */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 92vh;           /* ocupa casi toda la pantalla al inicio */
+    min-height: 500px;
+    overflow: hidden;
+}
+
+/* Carrusel: las 4 imágenes juntas horizontalmente */
+.hero-slider {
+    display: flex;
+    width: 400%;            /* 4 imágenes × 100% = 400% total */
+    height: 100%;
+    list-style: none;
+    animation: carrusel 20s infinite ease-in-out; /* pasa automáticamente */
+}
+
+.hero-slider li {
+    width: 25%;             /* cada imagen ocupa 1/4 del total */
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.pinture_hero {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.45); /* oscurece la imagen para que se lea el texto */
+}
+
+/* Texto flotante sobre el carrusel */
+.texto_hero {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);   /* centrado vertical exacto */
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: aparece 0.8s ease both; /* entra con animación al cargar */
+}
+
+/* Etiqueta pequeña encima del título */
+.hero-badge {
+    display: inline-block;
+    background: rgba(124,109,250,0.2);
+    border: 1px solid var(--color-acento);
+    color: var(--color-acento);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.texto_hero h1 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(2.5rem, 6vw, 4.5rem); /* tamaño fluido entre pantallas */
+    font-weight: 800;
+    line-height: 1.1;
+    color: #fff;
+}
+
+/* La palabra "flow" en cursiva con color de acento */
+.texto_hero h1 em {
+    font-style: italic;
+    color: var(--color-acento);
+}
+
+.texto_hero p {
+    font-size: 1.1rem;
+    color: #bbbfcc;
+    max-width: 400px;
+}
+
+/* Grupo de botones del hero */
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;    /* en móvil se apilan */
+    align-items: center;
+}
+
+/* Botón principal (relleno) */
+.boton-main {
+    display: inline-block;
+    background: var(--color-acento);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform var(--transicion), box-shadow var(--transicion);
+    box-shadow: 0 0 24px rgba(124,109,250,0.4);
+}
+
+.boton-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 36px rgba(124,109,250,0.6);
+}
+
+/* Botón secundario (solo texto + flecha) */
+.boton-secondary {
+    color: var(--color-texto-dim);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color var(--transicion);
+}
+
+.boton-secondary:hover {
+    color: var(--color-texto);
+}
+
+/* ============================================
+   CARDS — Sección "¿Por qué elegirnos?"
+   ============================================ */
+#cartas {
+    padding: 100px 5%;
+}
+
+/* Encabezado de la sección */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Etiqueta pequeña encima del h2 */
+.section-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-acento);
+}
+
+.section-header h2 {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.2;
+    color: var(--color-texto);
+}
+
+/* Grid de tarjetas: se adapta automáticamente al ancho disponible */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+/* Estilo base de todas las tarjetas */
+.card {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra);
+}
+
+/* Imagen dentro de la tarjeta */
+.card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Cuerpo de texto de la tarjeta */
+.card__body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;                /* ocupa el espacio restante de la tarjeta */
+}
+
+.card__title {
+    font-family: var(--fuente-titulo);
+    font-size: 1.1rem;
+    color: var(--color-texto);
+}
+
+.card__text {
+    font-size: 0.9rem;
+    color: var(--color-texto-dim);
+    line-height: 1.6;
+}
+
+/* Tarjeta sin imagen: tiene un ícono grande en vez de foto */
+.card_sin_img {
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1640, #0f1624); /* fondo degradado sutil */
+    border-color: var(--color-acento);
+}
+
+.card__icon {
+    font-size: 2.5rem;
+    padding: 24px 24px 0;
+}
+
+/* ============================================
+   FOOTER — Pie de página
+   ============================================ */
+.footer {
+    text-align: center;
+    padding: 40px 5%;
+    border-top: 1px solid var(--color-borde);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-logo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.4rem;
+    color: var(--color-acento);
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    color: var(--color-texto-dim);
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+
+/* Carrusel: desplaza las imágenes cada ~5 segundos */
+@keyframes carrusel {
+    0%,  20% { margin-left: 0; }
+    25%, 45%  { margin-left: -100%; }
+    50%, 70%  { margin-left: -200%; }
+    75%, 100% { margin-left: -300%; }
+}
+
+/* El texto del hero aparece desde abajo al cargar */
+@keyframes aparece {
+    from { opacity: 0; transform: translateY(calc(-50% + 30px)); }
+    to   { opacity: 1; transform: translateY(-50%); }
+}
+
+/* ============================================
+   RESPONSIVE — Tableta (hasta 992px)
+   ============================================ */
+@media (max-width: 992px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .texto_hero {
+        left: 5%;
+        max-width: 85%;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — Móvil (hasta 768px)
+   ============================================ */
+@media (max-width: 768px) {
+
+    /* El menú de nav se convierte en un panel desplegable vertical */
+    .nav-header {
+        display: none;              /* oculto por defecto */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        position: absolute;
+        top: 68px;                  /* justo debajo del header */
+        left: 0;
+        right: 0;
+        background: #0d0f14;
+        border-bottom: 1px solid var(--color-borde);
+        padding: 16px 5%;
+        z-index: 999;
+    }
+
+    .nav-header.open {
+        display: flex;              /* se muestra al hacer clic en ☰ */
+    }
+
+    .nav-header a {
+        padding: 12px 0;
+        width: 100%;
+        border-bottom: 1px solid var(--color-borde);
+        font-size: 1rem;
+    }
+
+    .nav-header .nav-cta {
+        margin-top: 12px;
+        border-radius: var(--radio);
+        text-align: center;
+        border-bottom: none;
+    }
+
+    /* Muestra el botón hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        height: 85vh;
+    }
+
+    .texto_hero {
+        left: 4%;
+        right: 4%;
+        max-width: 100%;
+        gap: 14px;
+    }
+
+    .hero-actions {
+        flex-direction: column;  /* botones apilados verticalmente */
+        align-items: flex-start;
+    }
+
+    #cartas {
+        padding: 60px 4%;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — Móvil pequeño (hasta 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .hero {
+        height: 100svh;      /* 100% de la pantalla visible en móvil */
+    }
+
+    .texto_hero p {
+        font-size: 0.95rem;
+    }
+
+    .card__image {
+        height: 160px;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+}
