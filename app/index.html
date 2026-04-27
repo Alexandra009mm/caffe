@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelFlow — Diseño Web Profesional</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <h2>Pixel<span>Flow</span></h2>
+    <nav class="nav_header active" id="menu">
+      <ul>
+        <li class="list_nav"><a href="#inicio">Inicio</a></li>
+        <li class="list_nav"><a href="#beneficios">Beneficios</a></li>
+        <li class="list_nav"><a href="#menu-cafe">Servicios</a></li>
+        <li class="list_nav"><a href="#precios">Precios</a></li>
+        <li class="list_nav"><a href="#reserva">Portafolio</a></li>
+        <li class="list_nav"><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button id="boton_show" type="button" onclick="show_menu()">≡</button>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-badge">✦ Diseño web para negocios que crecen</div>
+    <h1>Tu presencia digital, <em>al siguiente nivel</em></h1>
+    <p>Creamos páginas web profesionales, rápidas y atractivas. Sin complicaciones, con resultados reales.</p>
+    <div class="hero-btns">
+      <a href="#contacto" class="btn-main">Solicitar cotización →</a>
+      <a href="#menu-cafe"  class="btn-ghost">Ver servicios</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><strong>120+</strong><span>Proyectos entregados</span></div>
+    <div class="stat"><strong>98%</strong><span>Clientes satisfechos</span></div>
+    <div class="stat"><strong>5 días</strong><span>Tiempo de entrega</span></div>
+    <div class="stat"><strong>24/7</strong><span>Soporte incluido</span></div>
+  </section>
+
+  <section id="menu-cafe" class="services">
+    <div class="section-header">
+      <small>Lo que hacemos</small>
+      <h2>Nuestros servicios</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🖥️</div>
+        <h3>Diseño Web</h3>
+        <p>Sitios modernos, responsive y optimizados para convertir visitantes en clientes.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛒</div>
+        <h3>Tiendas Online</h3>
+        <p>E-commerce listo para vender desde el día uno, con pasarela de pago integrada.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3>SEO & Posicionamiento</h3>
+        <p>Estrategia para aparecer en Google y atraer clientes sin pagar anuncios.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔧</div>
+        <h3>Mantenimiento</h3>
+        <p>Tu web siempre actualizada, segura y con soporte técnico cuando lo necesites.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="cta">
+    <h2>¿Listo para empezar tu proyecto?</h2>
+    <p>Cuéntanos tu idea y te respondemos en menos de 24 horas con una propuesta.</p>
+    <a href="" class="btn-white">Escribirnos ahora ✉️</a>
+  </section>
+
+  <footer id="site-footer">
+    <p>&copy; <span id="year"></span></p>
+    <nav aria-label="Navegación del footer">
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
