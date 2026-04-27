@@ -1,0 +1,13 @@
+
+
+h1 {
+    color: darkblue;
+    animation: latido 2s infinite; /* ¡Tu título va a latir solo para siempre! */
+}  
+
+
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
