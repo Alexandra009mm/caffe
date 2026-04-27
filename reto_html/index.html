@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlowState - Master Your Day</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">FlowState</div>
+    <button id="boton_show" class="menu-toggle" onclick="show_menu()">≡</button>
+    <nav class="nav-header" id="nav">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#" class="btn-nav">Get Started</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contenedor-img1">
+      <ul>
+        <li><img src="https://picsum.photos/id/1/1200/900" alt="Slide 1" /></li>
+        <li><img src="https://picsum.photos/id/2/1200/900" alt="Slide 2" /></li>
+        <li><img src="https://picsum.photos/id/3/1200/900" alt="Slide 3" /></li>
+      </ul>
+      <div class="hero-content">
+        <h1>Master Your Day, Effortlessly.</h1>
+        <p>The all-in-one productivity app to manage tasks and achieve goals.</p>
+        <button class="btn-main">Start Your Free Trial</button>
+      </div>
+    </section>
+
+    <section id="features" class="section-padding">
+      <h2 class="text-center">Features</h2>
+      <div class="grid-cards">
+        <article class="card">
+          <div class="icon">📋</div>
+          <h3>Task Manager</h3>
+          <p>Organize your daily tasks with ease.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⏱️</div>
+          <h3>Focus Timer</h3>
+          <p>Boost productivity with our integrated timer.</p>
+        </article>
+        <article class="card">
+          <div class="icon">📅</div>
+          <h3>Calendar Sync</h3>
+          <p>Connect your favorite calendar tools.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="section-padding bg-light">
+      <h2 class="text-center">Pricing</h2>
+      <div class="grid-pricing">
+        <div class="price-card">
+          <h4>Basic</h4>
+          <p class="price">Free</p>
+          <button class="btn-outline">Select Plan</button>
+        </div>
+        <div class="price-card popular">
+          <span>Popular</span>
+          <h4>Pro</h4>
+          <p class="price">$10/mo</p>
+          <button class="btn-main">Select Plan</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> FlowState App</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

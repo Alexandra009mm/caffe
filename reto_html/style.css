@@ -1,0 +1,272 @@
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    @keyframes cambio {
+      0%,  30% { margin-left:    0%; }
+      35%, 65% { margin-left: -100%; }
+      70%,100% { margin-left: -200%; }
+    }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 60px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #4f46e5;
+      letter-spacing: -0.5px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #1e293b;
+      line-height: 1;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-toggle:hover { transform: scale(1.1); }
+
+    .nav-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-header a {
+      text-decoration: none;
+      color: #1e293b;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: .9rem;
+      transition: 0.3s ease-in-out;
+    }
+
+    .nav-header a:hover { color: #4f46e5; background: #eef2ff; }
+
+    .nav-header .btn-nav {
+      background-color: #4f46e5;
+      color: #ffffff !important;
+      padding: 8px 18px;
+      border-radius: 8px;
+    }
+
+    .nav-header .btn-nav:hover {
+      background-color: #4338ca;
+      transform: translateY(-2px);
+    }
+
+    /* ── SLIDER ── */
+    .contenedor-img1 {
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+    }
+
+    .contenedor-img1 ul {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      list-style: none;
+      animation: cambio 12s infinite alternate ease-in-out;
+    }
+
+    .contenedor-img1 ul li { width: 33.33%; height: 100%; }
+
+    .contenedor-img1 ul li img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+      display: block;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #ffffff;
+      width: 90%;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .hero-content p {
+      font-size: clamp(.95rem, 2vw, 1.15rem);
+      opacity: .85;
+      margin-bottom: 28px;
+    }
+
+    /* ── BOTONES ── */
+    .btn-main {
+      background-color: #4f46e5;
+      color: #ffffff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: .95rem;
+      font-weight: 600;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-main:hover {
+      background-color: #4338ca;
+      transform: translateY(-2px);
+    }
+
+    .btn-main:focus { outline: 3px solid #a5b4fc; }
+
+    .btn-outline {
+      background: transparent;
+      color: #4f46e5;
+      border: 2px solid #4f46e5;
+      padding: 10px 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: .95rem;
+      font-weight: 600;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-outline:hover {
+      background-color: #4f46e5;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* ── LAYOUT ── */
+    .section-padding { padding: 60px 20px; }
+    .text-center { text-align: center; margin-bottom: 30px; font-size: 1.6rem; color: #1e293b; }
+    .bg-light { background-color: #f8fafc; }
+
+    .grid-cards {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .grid-pricing {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 28px 24px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(79,70,229,.12);
+      border-color: #4f46e5;
+    }
+
+    .card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .card h3 { font-size: 1.1rem; color: #1e293b; margin-bottom: 8px; }
+    .card p  { font-size: .9rem; color: #64748b; line-height: 1.6; }
+
+    /* ── PRICING ── */
+    .price-card {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: 0.3s ease-in-out;
+      position: relative;
+    }
+
+    .price-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(0,0,0,.08); }
+
+    .price-card.popular {
+      background: #4f46e5;
+      color: #ffffff;
+      border-color: #4f46e5;
+    }
+
+    .price-card.popular span {
+      position: absolute;
+      top: -12px; left: 50%;
+      transform: translateX(-50%);
+      background: #facc15;
+      color: #1e293b;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 3px 14px;
+      border-radius: 20px;
+    }
+
+    .price-card h4    { font-size: 1.2rem; margin-bottom: 10px; }
+    .price-card .price { font-size: 2rem; font-weight: 700; margin: 12px 0 22px; }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: #1e293b;
+      color: rgba(255,255,255,.6);
+      text-align: center;
+      padding: 22px;
+      font-size: .85rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (min-width: 1024px) {
+      .grid-cards   { grid-template-columns: repeat(3, 1fr); }
+      .grid-pricing { grid-template-columns: repeat(2, 1fr); max-width: 800px; }
+      .menu-toggle  { display: none; }
+    }
+
+    @media (max-width: 1023px) {
+      .menu-toggle { display: block; }
+
+      .nav-header {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,.1);
+        gap: 4px;
+      }
+
+      .nav-header.active { display: flex; }
+      .nav-header a { padding: 10px 14px; border-radius: 8px; }
+    }

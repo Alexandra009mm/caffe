@@ -1,0 +1,133 @@
+// 1. Variables
+$primary: #4f46e5;
+$primary-hover: #4338ca;
+$primary-focus: #a5b4fc;
+$dark: #1e293b;
+$light: #f8fafc;
+$white: #ffffff;
+
+// 2. Mixins (Para reglas que se repiten)
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition-standard {
+    transition: 0.3s ease-in-out;
+}
+
+// 3. Estilos Globales
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+// 4. Animaciones
+@keyframes cambio {
+    0%, 30% { margin-left: 0%; }
+    35%, 65% { margin-left: -100%; }
+    70%, 100% { margin-left: -200%; }
+}
+
+// 5. Componentes
+.contenedor-img1 {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+
+    ul {
+        display: flex;
+        width: 300%;
+        height: 100%;
+        list-style: none;
+        animation: cambio 12s infinite alternate ease-in-out;
+
+        li {
+            width: 33.33%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.6;
+                display: block;
+            }
+        }
+    }
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $white;
+    width: 90%;
+}
+
+.btn-main {
+    background-color: $primary;
+    color: $white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    @include transition-standard;
+
+    &:hover {
+        background-color: $primary-hover;
+        transform: translateY(-2px);
+    }
+
+    &:focus {
+        outline: 3px solid $primary-focus;
+    }
+}
+
+// 6. Layout & Grids
+.grid-cards, .grid-pricing {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-padding { padding: 60px 20px; }
+.text-center { text-align: center; margin-bottom: 30px; }
+.bg-light { background-color: $light; }
+
+// 7. Responsive & Media Queries
+@media (min-width: 1024px) {
+    .grid-cards { grid-template-columns: repeat(3, 1fr); }
+    .grid-pricing { 
+        grid-template-columns: repeat(2, 1fr); 
+        max-width: 800px; 
+    }
+    .menu-toggle { display: none; }
+}
+
+@media (max-width: 1023px) {
+    .nav-header {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: $white;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        &.active {
+            display: flex;
+        }
+    }
+}
