@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shattered Riffs</title>
+    <link rel="shortcut icon" href="./assets/icons/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="assets/icons/logo.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- HEADER -->
+     <header class="header">
+    <div class="logo">Shattered Riffs</div>
+    <nav class="nav_header active" id="menu">
+      <a href="#events">Events</a>
+      <a href="#about">About</a>
+      <a href="#media">Media</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="boton_show" type="button" onclick="show_menu()">≡</button>
+  </header>
+
+    <main>
+        <section class="hero">
+            <img src="assets/img/img-10.jpg" alt="Shattered Riffs Live">
+            <div class="hero_overlay">
+                <h1>Rock the Night</h1>
+                <p>Upcoming Tour</p>
+                <a href="#events" class="btn">View Events</a>
+            </div>
+        </section>
+        
+        <section class="events container" id="events">
+            <h2>Upcoming Events</h2>
+            <table class="events_table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>City</th>
+                        <th>Venue</th>
+                        <th>Tickets</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>19 MAY</td>
+                        <td>Madrid</td>
+                        <td>Sala El Sol</td>
+                        <td><a href="#" class="btn_buy">Buy </a></td>
+                    </tr>
+                    <tr>
+                        <td>15 MAY</td>
+                        <td>Barcelona</td>
+                        <td>Razzmatazz</td>
+                        <td><a href="#" class="btn_buy">buy</a></td>
+                    </tr>
+                    <tr>
+                        <td>18 MAY</td>
+                        <td>Valencia</td>
+                        <td>Moon Club</td>
+                        <td><a href="#" class="btn_buy">Buy</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="about" class="about container">  
+            <div class="about_content">
+                <img id="img_about" src="./assets/img/img-1.jpg" alt="Band members">
+                <article id="text_about">
+                    <h2>About the Band.</h2>
+                    <p>Shattered Riffs is a high-energy rock band known for powerful live performances and raw sound.</p>
+                    <h3>Our Influences</h3>
+                    <ul>
+                        <li>Classic Rock</li>
+                        <li>Hard Rock</li>
+                        <li>Alternative</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="media" class="container_main container">
+            <div class="gallery">
+                <img src="./assets/img/img-2.jpg" alt="Live 1">
+                <img src="./assets/img/img-3.jpg" alt="Live 2">
+                <img src="./assets/img/img-4.jpg" alt="Live 3">
+                <img src="./assets/img/img-5.jpg" alt="Live 4">
+                <img src="./assets/img/img-6.jpg" alt="Live 5">
+                <img src="./assets/img/img-7.jpg" alt="Live 6">
+            </div>
+            <div class="featured_media">
+                <h3>contact</h3>
+                <div class="contact-item">
+                <strong>Management:</strong> 
+                <span>management@thebandname.com</span>
+                </div>
+                <div class="contact-item">
+                <strong>Booking:</strong> 
+                <span>booking@rockagency.com</span>
+                </div>
+                <div class="contact-item">
+                <strong>Phone:</strong> 
+                <span>+1 (555) 987-6543</span>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+      <!-- FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="container footer__content">
+            <p>© <span id="year"></span> Shattered Riffs</p>
+
+            <!-- Another possible list -->
+            <ul class="social">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Spotify</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
